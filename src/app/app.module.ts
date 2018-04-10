@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { PeopleService } from "./people.service";
 
 
@@ -19,7 +20,8 @@ import { appRouterModule } from "./app.routes";
   ],
   imports: [
     BrowserModule,
-    appRouterModule
+    appRouterModule,
+    FormsModule
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
