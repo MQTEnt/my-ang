@@ -12,6 +12,7 @@ import { Person } from "../person";
 export class PersonDetailsComponent implements OnInit, OnDestroy {
   person: Person;
   sub: any;
+  professions: string[] = ['jedi', 'bounty hunter', 'princess', 'sith lord'];
 
   constructor(private route: ActivatedRoute,
               private peopleService: PeopleService,
