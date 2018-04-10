@@ -5,16 +5,13 @@ import { PeopleService } from "../people.service";
 @Component({
   selector: 'app-people-list',
   template: `
-
-    <!-- this is the new syntax for ng-repeat -->
     <ul>
       <li *ngFor="let person of people">
-        <a href="#" (click)="selectPerson(person)">
+        <a [routerLink]="['/person', person.id]">
           {{person.name}}
         </a>
       </li>
     </ul>
-    <app-person-details [person]="selectedPerson"></app-person-details>
   `,
   styleUrls: ['./people-list.component.scss']
 })
@@ -28,7 +25,7 @@ export class PeopleListComponent implements OnInit {
     this.people = this.peopleService.getAll();
   }
 
-  selectPerson(person: Person) {
+  selectPerson(person:Person){
     this.selectedPerson = person;
   }
 }
