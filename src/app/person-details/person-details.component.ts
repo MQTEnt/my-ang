@@ -32,4 +32,8 @@ export class PersonDetailsComponent implements OnInit, OnDestroy {
     let link = ['/people'];
     this.router.navigate(link);
   }
+
+  savePersonDetails(){
+    alert(`saved!!! ${JSON.stringify(this.person)}`);
+  }
 }
