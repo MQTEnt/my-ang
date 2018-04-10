@@ -7,18 +7,32 @@ import { PeopleService } from "../people.service";
   template: `
     <ul>
       <li *ngFor="let person of people">
-        {{person.name}}
+        <a href="#" (click)="selectPerson(person)">
+          {{person.name}}
+        </a>
       </li>
     </ul>
+    <section *ngIf="selectedPerson">
+      <h2>You selected:  {{selectedPerson.name}}</h2>
+      <h3>Description</h3>
+      <p>
+        {{selectedPerson.name}} weights  {{selectedPerson.weight}} and is  {{selectedPerson.height}} tall.
+      </p>
+    </section>
   `,
   styleUrls: ['./people-list.component.scss']
 })
 export class PeopleListComponent implements OnInit {
   people: Person[];
+  selectedPerson: Person;
 
   constructor(private peopleService: PeopleService) {
     this.people = peopleService.getAll();
   }
 
   ngOnInit() {}
+
+  selectPerson(person){
+    this.selectedPerson = person;
+  }
 }
