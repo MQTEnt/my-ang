@@ -34,6 +34,7 @@ export class PersonDetailsComponent implements OnInit, OnDestroy {
   }
 
   savePersonDetails(){
-    alert(`saved!!! ${JSON.stringify(this.person)}`);
+    this.peopleService.save(this.person);
+    alert('Saved Person!');
   }
 }
