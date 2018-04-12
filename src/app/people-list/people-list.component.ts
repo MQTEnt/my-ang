@@ -12,6 +12,7 @@ import { PeopleService } from "../people.service";
         </a>
       </li>
     </ul>
+    <p><a [routerLink]="['/rxjs-example']">Rxjs Example</a></p>
   `,
   styleUrls: ['./people-list.component.scss']
 })
@@ -25,7 +26,7 @@ export class PeopleListComponent implements OnInit {
     this.people = this.peopleService.getAll();
   }
 
-  selectPerson(person:Person){
+  selectPerson(person: Person){
     this.selectedPerson = person;
   }
 }

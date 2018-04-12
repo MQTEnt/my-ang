@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { PeopleListComponent } from './people-list/people-list.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
+import { RxjsExampleComponent } from './rxjs-example/rxjs-example.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'people',
     component: PeopleListComponent,
+  },
+  {
+    path: 'rxjs-example',
+    component: RxjsExampleComponent,
   },
   /*Set default route*/
   {

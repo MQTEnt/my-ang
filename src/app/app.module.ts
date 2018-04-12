@@ -9,6 +9,7 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 
 import { appRouterModule } from "./app.routes";
+import { RxjsExampleComponent } from './rxjs-example/rxjs-example.component';
 
 
 
@@ -16,7 +17,8 @@ import { appRouterModule } from "./app.routes";
   declarations: [
     AppComponent,
     PeopleListComponent,
-    PersonDetailsComponent
+    PersonDetailsComponent,
+    RxjsExampleComponent
   ],
   imports: [
     BrowserModule,
